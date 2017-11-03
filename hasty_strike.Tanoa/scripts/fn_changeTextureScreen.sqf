@@ -44,7 +44,7 @@ if(Ant_2_DT_STATUS) then
 	TARGET1_RDS setObjectTextureGlobal[1, TR_OFF];
 	TARGET2_RDS setObjectTextureGlobal[1, TR_OFF];
 	[TARGET2,0] call BIS_fnc_dataTerminalAnimate;
-	{if(str(group _x) == "Foxhound")then
+	{if(str(group _x) == "B Foxhound")then
 		{
 			["hack_vulcano", _x,["Hacken Sie die Antennensteurung!","Hacken",getMarkerPos "Obj2"],getMarkerPos "Obj2","succeeded",1, true] call BIS_fnc_setTask;	
 		};
