@@ -6,11 +6,17 @@ Ant_1_DT_STATUS = true;
 Ant_2_DT_STATUS = true;
 Ant_1_BEW_STATUS = true;
 Ant_2_BEW_STATUS = true;
+Ant_1_FEIND_STATUS = true;
+Ant_2_FEIND_STATUS = true;
+HILLTOP_INFIL = true;
 Exfil_STATUS=true;
 publicVariable "Ant_1_DT_STATUS";
 publicVariable "Ant_2_DT_STATUS";
 publicVariable "Ant_1_BEW_STATUS";
 publicVariable "Ant_2_BEW_STATUS";
+publicVariable "Ant_1_FEIND_STATUS";
+publicVariable "Ant_2_FEIND_STATUS";
+publicVariable "HILLTOP_INFIL";
 publicVariable "Exfil_STATUS";
 
 _action = [Ant_1_RDS, "bla"] execVM "scripts\fn_changeTextureScreen.sqf";
