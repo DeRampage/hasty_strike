@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=565;
+		nextID=569;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=373;
+		nextID=499;
 	};
 	class Camera
 	{
-		pos[]={9581.4775,365.78876,9087.8652};
-		dir[]={-0.52834874,-0.64033741,0.55751187};
-		up[]={-0.44046876,0.76809251,0.46478093};
-		aside[]={0.72583741,3.783498e-008,0.68786967};
+		pos[]={11575.988,322.16354,3438.7314};
+		dir[]={-0.68621761,-0.67111993,0.28058544};
+		up[]={-0.62119877,0.74134398,0.25400037};
+		aside[]={0.37847599,6.5937638e-007,0.9256224};
 	};
 };
 binarizationWanted=0;
@@ -615,7 +615,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=46;
+		items=50;
 		class Item0
 		{
 			dataType="Layer";
@@ -2492,7 +2492,7 @@ class Mission
 											};
 											id=189;
 											type="rhsgref_nat_militiaman_kar98k";
-											atlOffset=6.1035156e-005;
+											atlOffset=0.00018310547;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -2543,7 +2543,7 @@ class Mission
 										speedMode="LIMITED";
 									};
 									id=188;
-									atlOffset=6.1035156e-005;
+									atlOffset=0.00018310547;
 								};
 								class Item4
 								{
@@ -5665,12 +5665,13 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={11712.27,5.0104408,3176.9602};
+												position[]={11712.27,5.0104389,3176.96};
 											};
 											side="West";
 											flags=7;
 											class Attributes
 											{
+												name="tl_fox";
 												description="Teamleader Foxhound";
 												isPlayable=1;
 												class Inventory
@@ -5685,7 +5686,7 @@ class Mission
 											};
 											id=276;
 											type="B_T_Recon_TL_F";
-											atlOffset=0.13900185;
+											atlOffset=0.13899994;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -5753,13 +5754,14 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={11712.145,5.0104437,3173.5283};
-												angles[]={0,0.67983186,0};
+												position[]={11712.145,5.0104389,3173.5281};
+												angles[]={0,0.67982322,0};
 											};
 											side="West";
 											flags=5;
 											class Attributes
 											{
+												name="jtac_fox";
 												description="Com Operator";
 												isPlayable=1;
 												class Inventory
@@ -5774,7 +5776,7 @@ class Mission
 											};
 											id=277;
 											type="B_T_Recon_JTAC_F";
-											atlOffset=0.13900471;
+											atlOffset=0.13899994;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -6021,7 +6023,7 @@ class Mission
 										name="foxhound";
 									};
 									id=275;
-									atlOffset=0.13900185;
+									atlOffset=0.13899994;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -6608,13 +6610,14 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={11717.279,5.0104418,3172.2803};
-												angles[]={0,0.56546086,0};
+												position[]={11717.28,5.0104389,3172.28};
+												angles[]={0,0.56546921,0};
 											};
 											side="West";
 											flags=7;
 											class Attributes
 											{
+												name="tl_sent";
 												description="Teamleader Sentinel";
 												isPlayable=1;
 												class Inventory
@@ -6629,7 +6632,7 @@ class Mission
 											};
 											id=267;
 											type="B_T_Recon_TL_F";
-											atlOffset=0.1390028;
+											atlOffset=0.13899994;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -6697,13 +6700,14 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={11716.782,5.0104465,3169.5576};
-												angles[]={0,0.62890357,0};
+												position[]={11716.782,5.0104384,3169.5581};
+												angles[]={0,0.62891197,0};
 											};
 											side="West";
 											flags=5;
 											class Attributes
 											{
+												name="jtac_sent";
 												description="Com Operator";
 												isPlayable=1;
 												class Inventory
@@ -6718,7 +6722,7 @@ class Mission
 											};
 											id=266;
 											type="B_T_Recon_JTAC_F";
-											atlOffset=0.13900805;
+											atlOffset=0.13899994;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -6966,7 +6970,7 @@ class Mission
 										name="sentinel";
 									};
 									id=273;
-									atlOffset=0.1390028;
+									atlOffset=0.13899994;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -7012,7 +7016,7 @@ class Mission
 								};
 							};
 							id=432;
-							atlOffset=0.13899899;
+							atlOffset=0.13899755;
 						};
 						class Item3
 						{
@@ -8056,12 +8060,12 @@ class Mission
 			class Attributes
 			{
 				name="trigger_volcano";
-				condition="call{player in thisList}";
+				condition="call{this}";
 				onActivation="call{{if(str(group _x) == ""B Foxhound"")then {[""infil_volcano"", _x,[""Erreichen Sie die Forschungsstation"",""Infil"",getMarkerPos ""Obj2""],getMarkerPos ""Obj2"",""succeeded"",1, true] call BIS_fnc_setTask; [_x,[""hack_vulcano""],[""Hacken Sie die Antennensteurung!"",""Hacken"",getMarkerPos ""Obj2""],getMarkerPos ""Obj2"",1,2,true,""search""] call BIS_fnc_taskCreate; [_x,[""search_vulcano""],[""Durchsuchen Sie das Lager nach dem Verbleib des Wissenschaftsteams!"",""Durchsuchen"",getMarkerPos ""Obj2""],getMarkerPos ""Obj2"",1,2,true,""search""] call BIS_fnc_taskCreate; [_x,[""task_volcano""],[""Nehmen Sie die Forschungsstation ein!"",""Einnehmen"",getMarkerPos ""Obj2""],getMarkerPos ""Obj2"",1,2,true,""attack""] call BIS_fnc_taskCreate;}; } foreach allPlayers;}";
 				sizeA=250.84599;
 				sizeB=222.258;
 				sizeC=0;
-				activationBy="ANYPLAYER";
+				activationBy="WEST";
 			};
 			id=441;
 			type="EmptyDetectorAreaR50";
@@ -10868,12 +10872,13 @@ class Mission
 			class Attributes
 			{
 				name="trigger_hilltop";
-				condition="call{player in thisList}";
-				onActivation="call{{if(str(group _x) == ""B Sentinel"")then { [""infil_hilltop"", _x,[""Erreichen Sie den Aussenposten"",""Infil"",getMarkerPos ""Obj1""],getMarkerPos ""Obj1"",""succeeded"",1, true] call BIS_fnc_setTask; [_x,[""search_hilltop""],[""Durchsuchen Sie das Lager nach Informationen!"",""Durchsuchen"",getMarkerPos ""Obj1""],getMarkerPos ""Obj1"",1,2,true,""search""] call BIS_fnc_taskCreate; " \n " [_x,[""hack_hilltop""],[""Hacken Sie die Antennensteurung!"",""Hacken der Antennensteurung"",getMarkerPos ""Obj1""],getMarkerPos ""Obj1"",1,2,true,""use""] call BIS_fnc_taskCreate; [_x,[""task_hilltop""],[""Schalten Sie die Feindkräfte aus!"",""Einnehmen"",getMarkerPos ""Obj1""],getMarkerPos ""Obj1"",1,2,true,""attack""] call BIS_fnc_taskCreate; }; } foreach allPlayers;}";
+				condition="call{HILLTOP_INFIL AND this}";
+				onActivation="call{HILLTOP_INFIL = false; publicVariable ""HILLTOP_INFIL""; if(str(group _x) == ""B Sentinel"")then { [""infil_hilltop"", _x,[""Erreichen Sie den Aussenposten"",""Infil"",getMarkerPos ""Obj1""],getMarkerPos ""Obj1"",""succeeded"",1, true] call BIS_fnc_setTask; [_x,[""search_hilltop""],[""Durchsuchen Sie das Lager nach Informationen!"",""Durchsuchen"",getMarkerPos ""Obj1""],getMarkerPos ""Obj1"",1,2,true,""search""] call BIS_fnc_taskCreate; " \n " [_x,[""hack_hilltop""],[""Hacken Sie die Antennensteurung!"",""Hacken der Antennensteurung"",getMarkerPos ""Obj1""],getMarkerPos ""Obj1"",1,2,true,""use""] call BIS_fnc_taskCreate; [_x,[""task_hilltop""],[""Schalten Sie die Feindkräfte aus!"",""Einnehmen"",getMarkerPos ""Obj1""],getMarkerPos ""Obj1"",1,2,true,""attack""] call BIS_fnc_taskCreate; };}";
 				sizeA=250.84599;
 				sizeB=222.258;
 				sizeC=0;
-				activationBy="ANYPLAYER";
+				activationBy="WEST";
+				isServerOnly=1;
 			};
 			id=528;
 			type="EmptyDetectorAreaR50";
@@ -10886,12 +10891,12 @@ class Mission
 			class Attributes
 			{
 				name="trigger_sniper";
-				condition="call{player in thisList}";
+				condition="call{this}";
 				onActivation="call{{if(str(group _x) == ""B Ghost"")then { [""infil_sniper"", _x,[""Erreichen Sie den Observationspunkt"",""Infil"",getMarkerPos ""Obj3""],getMarkerPos ""Obj3"",""succeeded"",1, true] call BIS_fnc_setTask; [_x,[""task_sniper""],[""Klären Sie die Feindkräfte an der Zucker Fabrik auf! Ermitteln Sie die Position der Biowaffe sowie des Wissenschaftlers Walter White!"",""Aufklärung"",getMarkerPos ""Obj3""],getMarkerPos ""Obj3"",1,2,true,""scout""] call BIS_fnc_taskCreate; }; } foreach allPlayers;}";
-				sizeA=64.658638;
-				sizeB=60.4562;
+				sizeA=64.658997;
+				sizeB=60.456001;
 				sizeC=0;
-				activationBy="ANYPLAYER";
+				activationBy="WEST";
 			};
 			id=549;
 			type="EmptyDetectorAreaR50";
@@ -10950,6 +10955,370 @@ class Mission
 			};
 			id=563;
 			type="EmptyDetectorAreaR50";
+		};
+		class Item46
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={11708.744,4.8699999,3171.009};
+			};
+			name="zeus_test_1";
+			id=565;
+			type="ModuleCurator_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleCurator_F_Owner";
+					expression="_this setVariable ['Owner',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="tl_fox";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleCurator_F_Forced";
+					expression="_this setVariable ['Forced',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleCurator_F_Name";
+					expression="_this setVariable ['Name',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleCurator_F_Addons";
+					expression="_this setVariable ['Addons',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=2;
+						};
+					};
+				};
+				nAttributes=4;
+			};
+		};
+		class Item47
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={11709.051,4.8699999,3170.71};
+			};
+			name="zeus_test_2";
+			id=566;
+			type="ModuleCurator_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleCurator_F_Owner";
+					expression="_this setVariable ['Owner',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="jtac_fox";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleCurator_F_Forced";
+					expression="_this setVariable ['Forced',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleCurator_F_Name";
+					expression="_this setVariable ['Name',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleCurator_F_Addons";
+					expression="_this setVariable ['Addons',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=2;
+						};
+					};
+				};
+				nAttributes=4;
+			};
+		};
+		class Item48
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={11709.376,4.8699999,3170.2681};
+			};
+			name="zeus_test_3";
+			id=567;
+			type="ModuleCurator_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleCurator_F_Owner";
+					expression="_this setVariable ['Owner',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="tl_sent";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleCurator_F_Forced";
+					expression="_this setVariable ['Forced',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleCurator_F_Name";
+					expression="_this setVariable ['Name',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleCurator_F_Addons";
+					expression="_this setVariable ['Addons',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=2;
+						};
+					};
+				};
+				nAttributes=4;
+			};
+		};
+		class Item49
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={11709.608,4.8699999,3170.0911};
+			};
+			name="zeus_test_4";
+			id=568;
+			type="ModuleCurator_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleCurator_F_Owner";
+					expression="_this setVariable ['Owner',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="jtac_sent";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleCurator_F_Forced";
+					expression="_this setVariable ['Forced',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleCurator_F_Name";
+					expression="_this setVariable ['Name',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleCurator_F_Addons";
+					expression="_this setVariable ['Addons',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=2;
+						};
+					};
+				};
+				nAttributes=4;
+			};
 		};
 	};
 };
