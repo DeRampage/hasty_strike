@@ -12,10 +12,8 @@ if(str(TARGET)==str(TARGET2)) then
 	publicVariable"Ant_2_BEW_STATUS";
 };
 
-if(Ant_1_BEW_STATUS) then
+if(!Ant_1_BEW_STATUS) then
 {	
-	// When Intel on Antenna 1 got init, normaly only on mission start.
-}else{ //IF intel on Antenna 1 got searched
 	{if(str(group _x) == "B Sentinel")then
 		{
 			["search_hilltop", _x,["Durchsuchen Sie das Lager nach Informationen!","Durchsuchen",getMarkerPos "Obj1"],getMarkerPos "Obj1","succeeded",1, true] call BIS_fnc_setTask;	
@@ -23,10 +21,8 @@ if(Ant_1_BEW_STATUS) then
 	} foreach allPlayers;
 };
 
-if(Ant_2_BEW_STATUS) then
+if(!Ant_2_BEW_STATUS) then
 {	
-	// When Intel on Antenna 2 got init, normaly only on mission start.
-}else{ //IF intel on Antenna 2 got searched
 	{if(str(group _x) == "Foxhound")then
 		{
 			["search_vulcano", _x,["Durchsuchen Sie das Lager nach dem Verbleib des Wissenschaftsteams!","Durchsuchen",getMarkerPos "Obj2"],getMarkerPos "Obj2","succeeded",1, true] call BIS_fnc_setTask;
