@@ -1,0 +1,16 @@
+enableDebugConsole = 1;
+
+disabledAI = true;
+
+overviewText = "[TF47]Hasty Strike";
+author = "Jack Napier & Rampage";
+description = "Be fast! Be efficient! Be silent!";
+onLoadName = "[TF47]Hasty Strike";
+loadScreen = "Images\loading.paa";
+respawn = 3;
+class Header
+{
+     gameType = Coop;
+     minPlayers = 1;
+     maxPlayers = 14;
+};

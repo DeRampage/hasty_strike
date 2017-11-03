@@ -1,0 +1,21 @@
+#define TITLE "Hacken der Antenne"
+#define ICON  ""
+#define PROG_ICON    ""
+#define CODE_START {hint "Antenne wird gehackt..."}
+#define CODE_TICK {}
+#define CODE_END {hint "Hacken der Antenne erfolgreich!"; _action = _this execVM "scripts\fn_changeTextureScreen.sqf";}
+#define CODE_INTERUPT {}
+#define ARGUMENTS []
+#define DURATION 10
+#define PRIORITY 1
+#define REMOVE true
+#define SHOW_UNCON false
+
+if(str(_this)=="Ant_1_DT") then
+{
+	[_this,TITLE,ICON,PROG_ICON,str(Ant_1_DT_STATUS),str(Ant_1_DT_STATUS),CODE_START,CODE_TICK,CODE_END,CODE_INTERUPT,ARGUMENTS,DURATION,PRIORITY,REMOVE,SHOW_UNCON] call bis_fnc_holdActionAdd;
+};
+if(str(_this)=="Ant_2_DT") then
+{
+	[_this,TITLE,ICON,PROG_ICON,str(Ant_2_DT_STATUS),str(Ant_2_DT_STATUS),CODE_START,CODE_TICK,CODE_END,CODE_INTERUPT,ARGUMENTS,DURATION,PRIORITY,REMOVE,SHOW_UNCON] call bis_fnc_holdActionAdd;
+};
