@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=560;
+		nextID=565;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=352;
+		nextID=373;
 	};
 	class Camera
 	{
-		pos[]={9564.6914,356.71387,9077.6123};
-		dir[]={0,-0.70710683,0.70710683};
-		up[]={0,0.70710677,0.70710677};
-		aside[]={0.99999994,0,-0};
+		pos[]={9581.4775,365.78876,9087.8652};
+		dir[]={-0.52834874,-0.64033741,0.55751187};
+		up[]={-0.44046876,0.76809251,0.46478093};
+		aside[]={0.72583741,3.783498e-008,0.68786967};
 	};
 };
 binarizationWanted=0;
@@ -615,7 +615,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=44;
+		items=46;
 		class Item0
 		{
 			dataType="Layer";
@@ -1890,7 +1890,6 @@ class Mission
 									{
 									};
 									id=403;
-									atlOffset=60.779999;
 								};
 								class Item1
 								{
@@ -1963,7 +1962,6 @@ class Mission
 									{
 									};
 									id=397;
-									atlOffset=60.779999;
 								};
 								class Item2
 								{
@@ -2036,7 +2034,6 @@ class Mission
 									{
 									};
 									id=399;
-									atlOffset=60.779999;
 								};
 								class Item3
 								{
@@ -2109,11 +2106,10 @@ class Mission
 									{
 									};
 									id=401;
-									atlOffset=60.779999;
 								};
 							};
 							id=428;
-							atlOffset=60.779999;
+							atlOffset=0.048370361;
 						};
 						class Item5
 						{
@@ -2496,7 +2492,7 @@ class Mission
 											};
 											id=189;
 											type="rhsgref_nat_militiaman_kar98k";
-											atlOffset=0.00018310547;
+											atlOffset=6.1035156e-005;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -2547,7 +2543,7 @@ class Mission
 										speedMode="LIMITED";
 									};
 									id=188;
-									atlOffset=0.00018310547;
+									atlOffset=6.1035156e-005;
 								};
 								class Item4
 								{
@@ -2762,7 +2758,7 @@ class Mission
 						};
 					};
 					id=52;
-					atlOffset=331.46991;
+					atlOffset=2.2536011;
 				};
 				class Item2
 				{
@@ -7851,7 +7847,7 @@ class Mission
 				};
 			};
 			id=50;
-			atlOffset=34.398911;
+			atlOffset=9.189209;
 		};
 		class Item2
 		{
@@ -8069,7 +8065,7 @@ class Mission
 			};
 			id=441;
 			type="EmptyDetectorAreaR50";
-			atlOffset=1.2357483;
+			atlOffset=1.2359009;
 		};
 		class Item10
 		{
@@ -10904,19 +10900,56 @@ class Mission
 		class Item43
 		{
 			dataType="Trigger";
-			position[]={8408.875,20.665001,10299.894};
+			position[]={9548.5479,331.60416,9104.2109};
 			class Attributes
 			{
-				name="trigger_volcano_1";
-				condition="call{player in thisList}";
-				sizeA=313.01099;
-				sizeB=258.18201;
+				name="trigger_enemies_hilltop";
+				condition="call{this}";
+				onActivation="call{{if(str(group _x) == ""B Sentinel"")then {[""task_hilltop"",_x,[""Schalten Sie die Feindkräfte aus!"",""Einnehmen"",getMarkerPos ""Obj1""],getMarkerPos ""Obj1"",""succeeded"",1,true] call BIS_fnc_setTask;};}foreach allPlayers; Ant_1_FEIND_STATUS = false; publicVariable ""Ant_1_FEIND_STATUS"";}";
+				sizeA=86.441002;
+				sizeB=78.103996;
 				sizeC=0;
-				activationBy="ANYPLAYER";
+				activationType="NOT PRESENT";
+				activationBy="GUER";
 			};
-			id=550;
+			id=561;
 			type="EmptyDetectorAreaR50";
-			atlOffset=1.2350006;
+		};
+		class Item44
+		{
+			dataType="Trigger";
+			position[]={10065.431,409.87,11795.334};
+			class Attributes
+			{
+				name="trigger_enemies_vulcano";
+				condition="call{this}";
+				onActivation="call{{if(str(group _x) == ""B Foxhound"")then {[""task_volcano"",_x,[""Nehmen Sie die Forschungsstation ein!"",""Einnehmen"",getMarkerPos ""Obj2""],getMarkerPos ""Obj2"",""succeeded"",1,true] call BIS_fnc_setTask;};}foreach allPlayers; Ant_2_FEIND_STATUS = false; publicVariable ""Ant_2_FEIND_STATUS"";}";
+				sizeA=184.228;
+				sizeB=155.075;
+				sizeC=0;
+				activationType="NOT PRESENT";
+				activationBy="GUER";
+			};
+			id=562;
+			type="EmptyDetectorAreaR50";
+		};
+		class Item45
+		{
+			dataType="Trigger";
+			position[]={8389.8613,19.43,10262.501};
+			class Attributes
+			{
+				name="trigger_enemies_sugar";
+				condition="call{this}";
+				onActivation="call{{if(str(side _x)==""WEST"") then{[""sugar"",_x,[""Formieren Sie sich neu und werfen Sie die Feindkräfte an der Zucker Fabrik!"",""Zucker Fabrik"",getMarkerPos ""Obj4""],getMarkerPos ""Obj4"",""succeeded"",1,true] call BIS_fnc_setTask;};}foreach allPlayers;}";
+				sizeA=448.81799;
+				sizeB=398.32001;
+				sizeC=0;
+				activationType="NOT PRESENT";
+				activationBy="GUER";
+			};
+			id=563;
+			type="EmptyDetectorAreaR50";
 		};
 	};
 };
