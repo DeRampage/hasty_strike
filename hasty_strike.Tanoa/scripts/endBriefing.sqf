@@ -14,3 +14,4 @@
 		[_x,["infil_sniper"],["Erreichen Sie den Observationspunkt","Infil",getMarkerPos "Obj3"],getMarkerPos "Obj3",1,2,true,"walk"] call BIS_fnc_taskCreate;
 	};
 } foreach allPlayers;
+remote removeAction 0;
