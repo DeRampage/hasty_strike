@@ -23,7 +23,7 @@ if(!Ant_1_BEW_STATUS) then
 
 if(!Ant_2_BEW_STATUS) then
 {	
-	{if(str(group _x) == "Foxhound")then
+	{if(str(group _x) == "B Foxhound")then
 		{
 			["search_vulcano", _x,["Durchsuchen Sie das Lager nach dem Verbleib des Wissenschaftsteams!","Durchsuchen",getMarkerPos "Obj2"],getMarkerPos "Obj2","succeeded",1, true] call BIS_fnc_setTask;
 		};

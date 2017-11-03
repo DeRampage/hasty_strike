@@ -12,6 +12,15 @@
 "Ant_2_BEW_STATUS" addPublicVariableEventHandler {
 	Ant_2_BEW_STATUS = _this select 1;
 };
+"Ant_1_FEIND_STATUS" addPublicVariableEventHandler {
+	Ant_1_FEIND_STATUS = _this select 1;
+};
+"Ant_2_FEIND_STATUS" addPublicVariableEventHandler {
+	Ant_2_FEIND_STATUS = _this select 1;
+};
+"HILLTOP_INFIL" addPublicVariableEventHandler {
+	HILLTOP_INFIL = _this select 1;
+};
 "Exfil_STATUS" addPublicVariableEventHandler {
 	Exfil_STATUS = _this select 1;
 };
@@ -34,8 +43,8 @@ player createDiaryRecord ["Diary", ["Feindliche Lage", "Stärke, Art, Verhalten,
 //Briefing Task
 [player,["briefing"],["Begeben Sie Sich zum Briefing","Briefing",getMarkerPos "Obj0"],getMarkerPos "Obj0",1,2,true,"meet"] call BIS_fnc_taskCreate;
 
-if(str(side player)=="CIV") then
-{
+//if(str(side player)=="CIV") then
+//{
 	null = remote addAction ["Briefing", "scripts\endBriefing.sqf"];
 	null = ExfilCan execVM "scripts\fn_addHoldActionExfil.sqf";
-};
+//};
