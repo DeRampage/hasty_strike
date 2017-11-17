@@ -1,0 +1,1 @@
+_this addaction ["<t color='#00FF00'>Arsenal</t>", { ["Open",true] call BIS_fnc_arsenal; }];
